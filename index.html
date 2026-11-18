@@ -9,7 +9,7 @@
       name="description"
       content="George Shop hair stylist in Mtayleb and Dekwaneh, Lebanon. Haircuts, styling and grooming, open Mon–Sat. Call or WhatsApp to book today." />
     <link rel="canonical" href="https://georgeshop.co/" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
     <meta name="author" content="George Shop" />
     <meta name="theme-color" content="#000000" />
     <meta name="color-scheme" content="dark" />
@@ -36,13 +36,8 @@
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-
-    <link rel="preload" as="image" href="/assets/hero-poster.jpg" media="(min-width: 761px)" />
-    <link
-      rel="preload"
-      as="image"
-      href="/assets/hero-poster-mobile.jpg"
-      media="(max-width: 760px)" />
+    <link rel="preload" as="image" href="/assets/george-at-work-wide.jpg" media="(orientation: landscape)" />
+    <link rel="preload" as="image" href="/assets/george-at-work.jpg" media="(orientation: portrait)" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -98,7 +93,10 @@
             ],
             "url": "https://georgeshop.co/",
             "logo": "https://georgeshop.co/assets/icon-512.png",
-            "image": "https://georgeshop.co/assets/og-image.jpg",
+            "image": [
+              "https://georgeshop.co/assets/george-at-work.jpg",
+              "https://georgeshop.co/assets/og-image.jpg"
+            ],
             "sameAs": [
               "https://www.facebook.com/GeorgeShopLebanon",
               "https://www.instagram.com/georgeshoprk/"
@@ -141,7 +139,10 @@
               "@id": "https://georgeshop.co/#organization"
             },
             "url": "https://georgeshop.co/#mtayleb",
-            "image": "https://georgeshop.co/assets/og-image.jpg",
+            "image": [
+              "https://georgeshop.co/assets/george-at-work.jpg",
+              "https://georgeshop.co/assets/og-image.jpg"
+            ],
             "logo": "https://georgeshop.co/assets/icon-512.png",
             "telephone": "+961 3 217 789",
             "address": {
@@ -195,7 +196,10 @@
               "@id": "https://georgeshop.co/#organization"
             },
             "url": "https://georgeshop.co/#dekwaneh",
-            "image": "https://georgeshop.co/assets/og-image.jpg",
+            "image": [
+              "https://georgeshop.co/assets/george-at-work.jpg",
+              "https://georgeshop.co/assets/og-image.jpg"
+            ],
             "logo": "https://georgeshop.co/assets/icon-512.png",
             "telephone": "+961 3 333 384",
             "address": {
@@ -243,16 +247,7 @@
     <script src="/js/main.js" defer></script>
   </head>
   <body>
-    <div class="backdrop" aria-hidden="true">
-      <video
-        class="backdrop-video"
-        muted
-        loop
-        playsinline
-        preload="auto"
-        data-src-desktop="/assets/hero-1080.mp4"
-        data-src-mobile="/assets/hero-mobile.mp4"></video>
-    </div>
+    <div class="backdrop" aria-hidden="true"></div>
 
     <svg width="0" height="0" style="position: absolute" aria-hidden="true">
       <symbol id="icon-phone" viewBox="0 0 24 24">

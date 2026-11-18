@@ -53,8 +53,8 @@ Google trusts a business more when its name, address and phone number are identi
 ```
 index.html          Page content, SEO tags and structured data
 css/style.css       All styles
-js/main.js          Opening-hours status, background video, card hover light
-assets/             Logo, icons, background videos and still images
+js/main.js          Opening-hours status, card hover light
+assets/             Logo, icons, background photo, link-preview image
 favicon.ico         Browser tab icon
 site.webmanifest    App name and icons for "Add to Home Screen"
 robots.txt          Search engine crawl rules

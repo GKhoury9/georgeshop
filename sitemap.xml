@@ -7,5 +7,11 @@
     <image:image>
       <image:loc>https://georgeshop.co/assets/og-image.jpg</image:loc>
     </image:image>
+    <image:image>
+      <image:loc>https://georgeshop.co/assets/george-at-work.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://georgeshop.co/assets/george-at-work-wide.jpg</image:loc>
+    </image:image>
   </url>
 </urlset>

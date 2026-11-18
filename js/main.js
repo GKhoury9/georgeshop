@@ -31,31 +31,6 @@
     el.title = `Mon – Sat, ${formatHour(opens)} – ${formatHour(closes)}. Closed on Sunday.`;
   });
 
-  // Background video. Phones get a lighter portrait cut; skipped entirely
-  // for reduced motion or data saver, in which case the still frame stays.
-  const video = document.querySelector(".backdrop-video");
-  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const saveData = navigator.connection?.saveData;
-
-  if (video && !reduceMotion && !saveData) {
-    const isPhone = matchMedia("(max-width: 760px)").matches;
-    video.src = isPhone ? video.dataset.srcMobile : video.dataset.srcDesktop;
-
-    video.addEventListener(
-      "canplay",
-      () => {
-        video.classList.add("is-ready");
-        video.play().catch(() => {});
-      },
-      { once: true },
-    );
-
-    document.addEventListener("visibilitychange", () => {
-      if (document.hidden) video.pause();
-      else video.play().catch(() => {});
-    });
-  }
-
   if (matchMedia("(hover: hover)").matches) {
     document.querySelectorAll(".branch").forEach((card) => {
       card.addEventListener("pointermove", (event) => {

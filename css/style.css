@@ -91,52 +91,47 @@ ul {
   }
 }
 
-/* Background video */
+/* Background photo
+   Landscape screens (computers, tablets on their side): a wide photo fills the
+   screen, with George on the left and the logo over the empty background.
+   Portrait screens: a tall photo, see the orientation query further down. */
 
 .backdrop {
   position: fixed;
   inset: 0;
   z-index: -1;
   overflow: hidden;
-  background: #000;
-}
-
-.backdrop::before,
-.backdrop-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  /* same black as the photo's backdrop, so its edges disappear */
+  background: #050505;
 }
 
 .backdrop::before {
   content: "";
-  background: url("/assets/hero-poster.jpg") center / cover no-repeat;
-}
-
-.backdrop-video {
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1.2s ease;
-}
-
-.backdrop-video.is-ready {
-  opacity: 1;
+  position: absolute;
+  inset: 0;
+  /* zoomed out: the photo is a bit smaller than the screen, anchored bottom-left,
+     and its top and right edges fade into the dark background */
+  --photo-h: 86vh;
+  --wide-x: 3vw;
+  background: url("/assets/george-at-work-wide.jpg") var(--wide-x) bottom / auto var(--photo-h) no-repeat;
+  -webkit-mask-image:
+    linear-gradient(180deg, transparent calc(100vh - var(--photo-h)), #000 calc(100vh - var(--photo-h) + 12vh)),
+    linear-gradient(90deg, transparent var(--wide-x), #000 calc(var(--wide-x) + 8vw), #000 calc(var(--wide-x) + var(--photo-h) * 1.777 - 22vh), transparent calc(var(--wide-x) + var(--photo-h) * 1.777));
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(180deg, transparent calc(100vh - var(--photo-h)), #000 calc(100vh - var(--photo-h) + 12vh)),
+    linear-gradient(90deg, transparent var(--wide-x), #000 calc(var(--wide-x) + 8vw), #000 calc(var(--wide-x) + var(--photo-h) * 1.777 - 22vh), transparent calc(var(--wide-x) + var(--photo-h) * 1.777));
+  mask-composite: intersect;
 }
 
 .backdrop::after {
   content: "";
   position: absolute;
   inset: 0;
+  /* shade only where text sits: behind the logo and along the bottom cards */
   background:
-    radial-gradient(ellipse 60% 50% at 50% 38%, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.7) 75%),
-    linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.45) 0%,
-      rgba(0, 0, 0, 0.2) 35%,
-      rgba(0, 0, 0, 0.35) 70%,
-      rgba(0, 0, 0, 0.6) 100%
-    );
+    radial-gradient(ellipse 32% 42% at 50% 40%, rgba(0, 0, 0, 0.5), transparent 70%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 25%, transparent 55%, rgba(0, 0, 0, 0.6) 100%);
 }
 
 /* Hero */
@@ -398,21 +393,67 @@ ul {
   }
 }
 
-/* Phones get a portrait cut of the video. It sits lower so the scissors
- show under the logo; the top edge fades into black. */
+/* Computers and landscape tablets: George is on the left of the wide photo,
+   so the logo, socials and branch cards stack in a column on the right. */
 
-@media (max-width: 760px) {
-  .backdrop::before {
-    background-image: url("/assets/hero-poster-mobile.jpg");
-    background-position: 50% 0;
+@media (orientation: landscape) and (min-width: 1000px) {
+  .page {
+    width: min(600px, 44vw);
+    max-width: none;
+    margin: 0 6vw 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
-  .backdrop::before,
-  .backdrop-video {
-    object-position: 50% 0;
-    transform: translateY(15svh);
-    -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 18%);
-    mask-image: linear-gradient(180deg, transparent 0, #000 18%);
+  .branch-list {
+    grid-template-columns: 1fr;
+  }
+
+
+  .backdrop::after {
+    background:
+      radial-gradient(ellipse 30% 45% at 78% 40%, rgba(0, 0, 0, 0.45), transparent 70%),
+      linear-gradient(90deg, transparent 45%, rgba(0, 0, 0, 0.35) 100%),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 25%);
+  }
+}
+
+/* Portrait screens: the photo at full width from the top. Its empty dark
+   top sits behind the logo; the bottom fades out behind the cards. */
+
+@media (orientation: portrait) {
+  .backdrop::after {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.35) 0%,
+      rgba(0, 0, 0, 0.05) 35%,
+      rgba(0, 0, 0, 0.1) 60%,
+      rgba(0, 0, 0, 0.55) 100%
+    );
+  }
+
+  .backdrop {
+    /* a tiny, darkened copy of the tall photo, stretched into a soft glow */
+    background: #000 url("/assets/george-at-work-glow.jpg") center / cover no-repeat;
+    --photo-top: 0;
+    --photo-size: 100vw;
+    --photo-x: 50%;
+  }
+
+  .backdrop::before {
+    background-image: url("/assets/george-at-work.jpg");
+    background-size: var(--photo-size) auto;
+    background-position: var(--photo-x) var(--photo-top);
+    -webkit-mask-image: linear-gradient(
+      180deg,
+      #000 calc(var(--photo-top) + var(--photo-size) * 1.55),
+      transparent calc(var(--photo-top) + var(--photo-size) * 1.78)
+    );
+    mask-image: linear-gradient(
+      180deg,
+      #000 calc(var(--photo-top) + var(--photo-size) * 1.55),
+      transparent calc(var(--photo-top) + var(--photo-size) * 1.78)
+    );
   }
 }
 
@@ -519,6 +560,62 @@ ul {
 
   .branch:hover::before {
     opacity: 1;
+  }
+}
+
+/* Wide screens: room for the two branch cards side by side */
+
+@media (orientation: landscape) and (min-width: 1400px) {
+  .page {
+    width: min(1040px, 50vw);
+  }
+
+  .branch-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .branch {
+    padding: 18px;
+  }
+
+  .branch-name {
+    font-size: 21px;
+  }
+
+  .hours {
+    font-size: 12px;
+  }
+
+  .btn-map {
+    width: 40px;
+    height: 40px;
+  }
+
+  .btn-review {
+    height: 40px;
+    padding: 0 13px;
+    font-size: 13px;
+  }
+
+  .btn-call,
+  .btn-whatsapp {
+    height: 44px;
+    font-size: 14px;
+  }
+
+
+  .backdrop::after {
+    background:
+      radial-gradient(ellipse 30% 45% at 70% 40%, rgba(0, 0, 0, 0.45), transparent 70%),
+      linear-gradient(90deg, transparent 40%, rgba(0, 0, 0, 0.35) 100%),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 25%);
+  }
+}
+
+/* Short phones: lift the photo so George sits right under the logo */
+@media (orientation: portrait) and (max-height: 700px) {
+  .backdrop {
+    --photo-top: -7svh;
   }
 }
 
