@@ -1,6 +1,6 @@
 # George Shop
 
-Website for **George Shop – Hair Stylist**, with two salons in Lebanon: Rabieh Mtayleb and Dekwaneh.
+Website for **George Shop – Hair Stylist**, with two salons in Lebanon: Mtayleb and Dekwaneh.
 
 ## Domain
 
@@ -44,7 +44,7 @@ For a local business, most ranking comes from Google Business Profile and review
 
 Google trusts a business more when its name, address and phone number are identical on every site that lists it: Google, Instagram, Facebook, WhatsApp Business, and directories.
 
-- [ ] **Use these phone numbers everywhere:** Rabieh Mtayleb **03 217 789**, Dekwaneh **03 333 384**. Replace the old landlines (04-927789 and 01-498349, shown on the old printed logo) wherever they still appear: Google Business profiles, Facebook, Instagram, directories and printed material.
+- [ ] **Use these phone numbers everywhere:** Mtayleb **03 217 789**, Dekwaneh **03 333 384**. Replace the old landlines (04-927789 and 01-498349, shown on the old printed logo) wherever they still appear: Google Business profiles, Facebook, Instagram, directories and printed material.
 - [ ] Put `https://georgeshop.co/` in the Instagram bio and on the Facebook page.
 - [ ] List both salons on Lebanese directories and Apple Maps with the same details.
 
