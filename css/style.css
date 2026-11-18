@@ -463,7 +463,8 @@ ul {
   }
 
   .hero {
-    padding-bottom: 20svh;
+    align-items: flex-start;
+    padding-top: 2svh;
   }
   .logo {
     width: min(250px, 60vw, calc(24svh * 1.65));
@@ -526,12 +527,6 @@ ul {
     height: 38px;
     padding: 0 12px;
     font-size: 13px;
-  }
-}
-
-@media (max-width: 560px) and (min-height: 760px) {
-  .hero {
-    padding-bottom: 32svh;
   }
 }
 
@@ -612,10 +607,13 @@ ul {
   }
 }
 
-/* Short phones: lift the photo so George sits right under the logo */
-@media (orientation: portrait) and (max-height: 700px) {
+/* Phones: the photo starts right under the logo, so George sits in the same
+   place on every phone whatever the browser bars leave of the screen.
+   Logo bottom = page top padding + hero top padding + logo height (446x272);
+   George's hair starts 61.4% of the photo's width below its top edge. */
+@media (orientation: portrait) and (max-width: 560px) {
   .backdrop {
-    --photo-top: -7svh;
+    --photo-top: calc(clamp(20px, 3.5svh, 40px) + 2svh + min(250px, 60vw, 39.6svh) * 0.61 + 6px - 61.4vw);
   }
 }
 
