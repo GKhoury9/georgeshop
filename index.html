@@ -7,9 +7,9 @@
     <title>George Shop – Hair Stylist in Rabieh Mtayleb &amp; Dekwaneh</title>
     <meta
       name="description"
-      content="George Shop hair stylist – two salons in Lebanon: Rabieh Mtayleb (Mtaileb) and Dekwaneh. Haircuts, styling and grooming. Call to book or get directions." />
+      content="George Shop hair stylist in Rabieh Mtayleb and Dekwaneh, Lebanon. Haircuts, styling and grooming, open Mon–Sat. Call or WhatsApp to book today." />
     <link rel="canonical" href="https://georgeshop.co/" />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="author" content="George Shop" />
     <meta name="theme-color" content="#000000" />
     <meta name="color-scheme" content="dark" />
@@ -24,10 +24,8 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:url" content="https://georgeshop.co/" />
     <meta property="og:title" content="George Shop – Hair Stylist" />
-    <meta
-      property="og:description"
-      content="Two salons in Lebanon: Rabieh Mtayleb and Dekwaneh. Call or WhatsApp to book." />
-    <meta property="og:image" content="https://georgeshop.co/assets/og-image.jpg" />
+    <meta property="og:description" content="Rabieh Mtayleb: 03 217 789&#10;Dekwaneh: 03 333 384" />
+    <meta property="og:image" content="https://georgeshop.co/assets/og-image.jpg?v=2" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -35,7 +33,7 @@
     <meta name="twitter:card" content="summary_large_image" />
 
     <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/assets/monogram.svg" type="image/svg+xml" />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
 
@@ -61,15 +59,43 @@
             "@id": "https://georgeshop.co/#website",
             "url": "https://georgeshop.co/",
             "name": "George Shop",
-            "alternateName": "George Shop Hair Stylist",
+            "alternateName": [
+              "George Shop Hair Stylist",
+              "جورج شوب"
+            ],
             "inLanguage": "en",
-            "publisher": { "@id": "https://georgeshop.co/#organization" }
+            "publisher": {
+              "@id": "https://georgeshop.co/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://georgeshop.co/#webpage",
+            "url": "https://georgeshop.co/",
+            "name": "George Shop – Hair Stylist in Rabieh Mtayleb & Dekwaneh",
+            "description": "George Shop hair stylist in Rabieh Mtayleb and Dekwaneh, Lebanon. Haircuts, styling and grooming, open Mon–Sat. Call or WhatsApp to book today.",
+            "inLanguage": "en",
+            "isPartOf": {
+              "@id": "https://georgeshop.co/#website"
+            },
+            "about": {
+              "@id": "https://georgeshop.co/#organization"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://georgeshop.co/assets/og-image.jpg",
+              "width": 1200,
+              "height": 630
+            }
           },
           {
             "@type": "Organization",
             "@id": "https://georgeshop.co/#organization",
             "name": "George Shop",
-            "alternateName": "George Shop Hair Stylist",
+            "alternateName": [
+              "George Shop Hair Stylist",
+              "جورج شوب"
+            ],
             "url": "https://georgeshop.co/",
             "logo": "https://georgeshop.co/assets/icon-512.png",
             "image": "https://georgeshop.co/assets/og-image.jpg",
@@ -78,16 +104,44 @@
               "https://www.instagram.com/georgeshoprk/"
             ],
             "subOrganization": [
-              { "@id": "https://georgeshop.co/#mtayleb" },
-              { "@id": "https://georgeshop.co/#dekwaneh" }
+              {
+                "@id": "https://georgeshop.co/#mtayleb"
+              },
+              {
+                "@id": "https://georgeshop.co/#dekwaneh"
+              }
+            ],
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "name": "Rabieh Mtayleb",
+                "telephone": "+961 3 217 789",
+                "contactType": "reservations",
+                "areaServed": "LB"
+              },
+              {
+                "@type": "ContactPoint",
+                "name": "Dekwaneh",
+                "telephone": "+961 3 333 384",
+                "contactType": "reservations",
+                "areaServed": "LB"
+              }
             ]
           },
           {
             "@type": "HairSalon",
             "@id": "https://georgeshop.co/#mtayleb",
             "name": "George Shop – Rabieh Mtayleb",
-            "alternateName": ["George Shop Mtaileb", "George Shop Rabieh"],
-            "parentOrganization": { "@id": "https://georgeshop.co/#organization" },
+            "alternateName": [
+              "George Shop Mtaileb",
+              "George Shop Rabieh",
+              "جورج شوب الرابية",
+              "جورج شوب المطيلب"
+            ],
+            "description": "George Shop hair stylist in Rabieh Mtayleb, Lebanon. Haircuts, styling and grooming. Open Monday to Saturday, 9 AM to 8 PM.",
+            "parentOrganization": {
+              "@id": "https://georgeshop.co/#organization"
+            },
             "url": "https://georgeshop.co/#mtayleb",
             "image": "https://georgeshop.co/assets/og-image.jpg",
             "logo": "https://georgeshop.co/assets/icon-512.png",
@@ -99,23 +153,49 @@
               "addressRegion": "Mount Lebanon",
               "addressCountry": "LB"
             },
-            "geo": { "@type": "GeoCoordinates", "latitude": 33.9242531, "longitude": 35.6191216 },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 33.9242531,
+              "longitude": 35.6191216
+            },
             "hasMap": "https://maps.google.com/?cid=2125073729339018348",
             "openingHoursSpecification": [
               {
                 "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday"
+                ],
                 "opens": "09:00",
                 "closes": "20:00"
               }
             ],
-            "areaServed": ["Rabieh", "Mtayleb", "Metn", "Mount Lebanon"]
+            "areaServed": [
+              "Rabieh",
+              "Mtayleb",
+              "Metn",
+              "Mount Lebanon",
+              "الرابية",
+              "المطيلب",
+              "المتن"
+            ]
           },
           {
             "@type": "HairSalon",
             "@id": "https://georgeshop.co/#dekwaneh",
             "name": "George Shop – Dekwaneh",
-            "parentOrganization": { "@id": "https://georgeshop.co/#organization" },
+            "alternateName": [
+              "George Shop Dekwaneh",
+              "جورج شوب الدكوانة"
+            ],
+            "description": "George Shop hair stylist in Dekwaneh, Lebanon. Haircuts, styling and grooming. Open Monday to Saturday, 9 AM to 6 PM.",
+            "parentOrganization": {
+              "@id": "https://georgeshop.co/#organization"
+            },
             "url": "https://georgeshop.co/#dekwaneh",
             "image": "https://georgeshop.co/assets/og-image.jpg",
             "logo": "https://georgeshop.co/assets/icon-512.png",
@@ -126,17 +206,36 @@
               "addressRegion": "Mount Lebanon",
               "addressCountry": "LB"
             },
-            "geo": { "@type": "GeoCoordinates", "latitude": 33.8797531, "longitude": 35.5430412 },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 33.8797531,
+              "longitude": 35.5430412
+            },
             "hasMap": "https://maps.google.com/?cid=7130930486507663506",
             "openingHoursSpecification": [
               {
                 "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday"
+                ],
                 "opens": "09:00",
                 "closes": "18:00"
               }
             ],
-            "areaServed": ["Dekwaneh", "Sin el Fil", "Metn", "Mount Lebanon"]
+            "areaServed": [
+              "Dekwaneh",
+              "Sin el Fil",
+              "Metn",
+              "Mount Lebanon",
+              "الدكوانة",
+              "سن الفيل",
+              "المتن"
+            ]
           }
         ]
       }

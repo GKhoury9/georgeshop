@@ -21,13 +21,32 @@ The site is already set up for `https://georgeshop.co/`: the canonical URL, soci
 
 ## SEO checklist after launch
 
+For a local business, most ranking comes from Google Business Profile and reviews, not the website alone. The site is set up; these steps do the rest.
+
+### Website
+
 - [ ] Add the site to [Google Search Console](https://search.google.com/search-console), verify ownership, and submit `https://georgeshop.co/sitemap.xml`.
-- [ ] Set the website on **both** Google Business profiles (Rabieh Mtayleb and Dekwaneh) to `https://georgeshop.co/`.
-- [ ] Put the same link in the Instagram bio and on the Facebook page.
 - [ ] Test the page with Google's [Rich Results Test](https://search.google.com/test/rich-results); it should find both salons.
 - [ ] Test sharing a link on WhatsApp/Facebook; it should show the logo preview image.
 - [ ] Add the Dekwaneh street address to the structured data in `index.html` (only the area is listed now). A full address helps local search.
 - [ ] Update `<lastmod>` in `sitemap.xml` whenever the page content changes.
+
+### Google Business Profile (one per salon)
+
+- [ ] Website set to `https://georgeshop.co/` on **both** profiles.
+- [ ] Primary category **Hair salon** (add **Barber shop** too if it applies).
+- [ ] Opening hours match the website exactly (Mtayleb 9–8, Dekwaneh 9–6, closed Sunday).
+- [ ] Phone number matches the website exactly (see below).
+- [ ] Add real photos regularly: the salon, the team, finished haircuts.
+- [ ] Ask happy customers for Google reviews and reply to every review. The **Review** buttons on the site link straight to each profile.
+
+### Same details everywhere
+
+Google trusts a business more when its name, address and phone number are identical on every site that lists it: Google, Instagram, Facebook, WhatsApp Business, and directories.
+
+- [ ] **Use these phone numbers everywhere:** Rabieh Mtayleb **03 217 789**, Dekwaneh **03 333 384**. Replace the old landlines (04-927789 and 01-498349, shown on the old printed logo) wherever they still appear: Google Business profiles, Facebook, Instagram, directories and printed material.
+- [ ] Put `https://georgeshop.co/` in the Instagram bio and on the Facebook page.
+- [ ] List both salons on Lebanese directories and Apple Maps with the same details.
 
 ## Files
 
