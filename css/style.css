@@ -195,11 +195,6 @@ ul {
     transform 0.3s var(--ease);
 }
 
-.btn:hover {
-  background: #fff;
-  color: #000;
-  border-color: #fff;
-}
 .btn-round {
   border-radius: 50%;
 }
@@ -237,9 +232,6 @@ ul {
 .btn-social svg {
   width: 22px;
   height: 22px;
-}
-.btn-social:hover {
-  transform: translateY(-2px);
 }
 
 /* Branches */
@@ -283,13 +275,6 @@ ul {
     rgba(255, 255, 255, 0.1),
     transparent 60%
   );
-}
-
-.branch:hover {
-  border-color: rgba(255, 255, 255, 0.28);
-}
-.branch:hover::before {
-  opacity: 1;
 }
 
 .branch-info {
@@ -367,10 +352,6 @@ ul {
 .btn-whatsapp svg {
   width: 20px;
   height: 20px;
-}
-.btn-whatsapp:hover {
-  background: var(--whatsapp);
-  border-color: var(--whatsapp);
 }
 
 .btn-map {
@@ -510,6 +491,34 @@ ul {
 @media (max-width: 560px) and (min-height: 760px) {
   .hero {
     padding-bottom: 32svh;
+  }
+}
+
+/* Hover effects only on devices with a real mouse. On phones a tapped
+   button would otherwise stay in its hover state after opening the link. */
+
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+  }
+
+  .btn-whatsapp:hover {
+    background: var(--whatsapp);
+    border-color: var(--whatsapp);
+  }
+
+  .btn-social:hover {
+    transform: translateY(-2px);
+  }
+
+  .branch:hover {
+    border-color: rgba(255, 255, 255, 0.28);
+  }
+
+  .branch:hover::before {
+    opacity: 1;
   }
 }
 
